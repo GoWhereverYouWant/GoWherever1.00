@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">带你玩</string>
+    <string name="forget_psw">忘记密码</string>
+    <string name="register">注册</string>
+    <string name="login">登录</string>
+</resources>
