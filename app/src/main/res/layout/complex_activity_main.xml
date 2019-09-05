@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@mipmap/sea" >
 
@@ -148,11 +149,12 @@
 
 			<Button
 				android:id="@+id/forgive_pwd"
-				android:layout_width="107dp"
-				android:layout_height="wrap_content"
-				android:layout_below="@+id/passwd_layout"
+				android:layout_width="wrap_content"
+				android:layout_height="35dp"
+				android:layout_below="@id/remember_pwd"
 				android:layout_alignRight="@id/remember_pwd"
 				android:layout_marginLeft="250dp"
+				android:layout_marginTop="6dp"
 				android:background="#00000000"
 				android:text="忘记密码?"
 				android:textColor="@android:color/white"
@@ -164,7 +166,7 @@
 				android:layout_height="40dp"
 				android:layout_below="@+id/passwd_layout"
 				android:layout_alignLeft="@+id/passwd_layout"
-				android:layout_marginLeft="150dp"
+				android:layout_marginLeft="130dp"
 				android:layout_marginTop="5dp"
 				android:gravity="left|center_vertical"
 				android:text="记住密码"
