@@ -35,8 +35,8 @@
         android:layout_gravity="bottom|left"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"
-        android:background="@color/rad"
-        android:textColor="@color/darkgrey"
+        android:background="@color/colorRad"
+        android:textColor="@color/colorDarkgrey"
         android:text="TextView"
         android:visibility="gone"/>
 
@@ -47,7 +47,7 @@
         android:layout_gravity="top|left"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:background="@color/grey"
+        android:background="@color/colorGrey"
         android:orientation="horizontal" >
 
         <RadioButton

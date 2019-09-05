@@ -4,4 +4,9 @@
     <string name="register">注册</string>
     <string name="login">登录</string>
     <string name="title_activity_home">HomeActivity</string>
+    <string name="gpslocate">定位</string>
+    <string name="gpsfollow">追踪</string>
+    <string name="gpsrotate">转动</string>
+
+
 </resources>
