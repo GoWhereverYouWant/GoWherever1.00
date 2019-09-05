@@ -23,7 +23,7 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-
+        <service android:name="com.amap.api.location.APSService"></service>
         <activity
             android:name=".HomeActivity"
             android:label="@string/title_activity_home"
