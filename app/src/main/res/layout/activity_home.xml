@@ -29,8 +29,8 @@
         android:layout_gravity="bottom|left"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"
-        android:background="@color/rad"
-        android:textColor="@color/green"
+        android:background="@color/Rad"
+        android:textColor="@color/Green"
         android:text="TextView"
         android:visibility="gone"/>
 
@@ -41,7 +41,7 @@
         android:layout_gravity="top|left"
         android:layout_marginLeft="0dp"
         android:layout_marginTop="0dp"
-        android:background="@color/yellow"
+        android:background="@color/Yellow"
         android:orientation="horizontal">
 
         <androidx.appcompat.widget.Toolbar
