@@ -23,9 +23,7 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <meta-data android:name="com.amap.api.v2.apikey" android:value="key">
-            56e96fbd5670fc367ecec86e16b6cae9
-        </meta-data>
+
         <activity
             android:name=".HomeActivity"
             android:label="@string/title_activity_home"
@@ -37,7 +35,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <meta-data android:name="com.amap.api.v2.apikey" android:value="56e96fbd5670fc367ecec86e16b6cae9"/>
+            //开发者申请的key
 
     </application>
 
