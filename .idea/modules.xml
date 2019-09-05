@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/GoWherever1.00.iml" filepath="$PROJECT_DIR$/GoWherever1.00.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app android-library/app android-library.iml" filepath="$PROJECT_DIR$/app android-library/app android-library.iml" />
     </modules>
   </component>
 </project>
