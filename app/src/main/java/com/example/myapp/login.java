@@ -9,8 +9,8 @@ public class login extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.complex_activity_main);
+
 
     }
 }
