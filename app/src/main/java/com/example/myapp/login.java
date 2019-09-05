@@ -19,7 +19,7 @@ public class login extends AppCompatActivity {
 
     public void jump_to_home(View view){
         Intent intent = new Intent();
-        intent.setClass(this,Home.class);
+        intent.setClass(this,HomeActivity.class);
         startActivity(intent);
     }
 
