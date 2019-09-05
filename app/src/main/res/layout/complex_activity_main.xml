@@ -240,7 +240,8 @@
             android:textColor="@android:color/white"
             android:textSize="22sp"
             android:background="@drawable/button_selector"
-            android:gravity="center" />
+            android:gravity="center"
+			android:onClick="jump_to_home"/>
 
     </RelativeLayout>
 </RelativeLayout>
