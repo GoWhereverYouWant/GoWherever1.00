@@ -29,7 +29,8 @@
             android:singleLine="true"
             android:text="注册"
             android:textColor="@android:color/white"
-            android:textSize="17sp" />
+            android:textSize="17sp"
+			android:onClick="jump_to_signin"/>
     </LinearLayout>
     <!--
     <LinearLayout

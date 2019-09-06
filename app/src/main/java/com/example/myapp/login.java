@@ -16,11 +16,21 @@ public class login extends AppCompatActivity {
 
     }
 
-
+    /**点击登录跳到主页*********************************************************/
     public void jump_to_home(View view){
         Intent intent = new Intent();
         intent.setClass(this, MapActivity.class);
         startActivity(intent);
     }
+    /**点击登录跳到主页*********************************************************/
+
+
+    /**点击右上角注册跳到注册页面*********************************************************/
+    public void jump_to_signin(View view){
+        Intent intent = new Intent();
+        intent.setClass(this,SignInActivity.class);
+        startActivity(intent);
+    }
+    /**点击右上角注册跳到注册页面*********************************************************/
 
 }
