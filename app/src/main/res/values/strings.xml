@@ -3,7 +3,10 @@
     <string name="forget_psw">忘记密码</string>
     <string name="register">注册</string>
     <string name="login">登录</string>
+    <string name="title_activity_map">地图</string>
     <string name="title_activity_home">主页</string>
+    <string name="title_activity_self">个人中心</string>
+    <string name="title_activity_setting">设置</string>
     <string name="gps_locate">定位</string>
     <string name="gps_follow">追踪</string>
     <string name="gps_rotate">转动</string>

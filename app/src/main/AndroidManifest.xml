@@ -25,7 +25,7 @@
         android:theme="@style/AppTheme.NoActionBar">
         <service android:name="com.amap.api.location.APSService"></service>
         <activity
-            android:name=".HomeActivity"
+            android:name=".MapActivity"
             android:label="@string/title_activity_home"
             android:theme="@style/AppTheme.NoActionBar.NoActionBar"></activity>
         <activity android:name=".login">

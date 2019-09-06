@@ -27,7 +27,7 @@ import com.amap.api.maps.AMap;
 import com.amap.api.maps.LocationSource;
 import com.amap.api.maps.MapView;
 
-public class HomeActivity extends AppCompatActivity implements LocationSource,
+public class MapActivity extends AppCompatActivity implements LocationSource,
         AMapLocationListener, RadioGroup.OnCheckedChangeListener {
 
     private AMap aMap;
@@ -49,7 +49,7 @@ public class HomeActivity extends AppCompatActivity implements LocationSource,
         super.onCreate(savedInstanceState);
         getGPSRoot();
         requestWindowFeature(Window.FEATURE_NO_TITLE);// 不显示程序的标题栏
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_map);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -199,15 +199,15 @@ public class HomeActivity extends AppCompatActivity implements LocationSource,
     private LocationManager lm;//【位置管理】
 
     public void getGPSRoot(){
-        lm = (LocationManager) HomeActivity.this.getSystemService(HomeActivity.this.LOCATION_SERVICE);
+        lm = (LocationManager) MapActivity.this.getSystemService(MapActivity.this.LOCATION_SERVICE);
         boolean ok = lm.isProviderEnabled(LocationManager.GPS_PROVIDER);
         if (ok) {//开了定位服务
-            if (ContextCompat.checkSelfPermission(HomeActivity.this, Manifest.permission.ACCESS_FINE_LOCATION)
+            if (ContextCompat.checkSelfPermission(MapActivity.this, Manifest.permission.ACCESS_FINE_LOCATION)
                     != PackageManager.PERMISSION_GRANTED) {
                 Log.e("BRG","没有权限");
                 // 没有权限，申请权限。
                 // 申请授权。
-                ActivityCompat.requestPermissions(HomeActivity.this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, LOCATION_CODE);
+                ActivityCompat.requestPermissions(MapActivity.this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, LOCATION_CODE);
 //                        Toast.makeText(getActivity(), "没有权限", Toast.LENGTH_SHORT).show();
 
             } else {
@@ -217,7 +217,7 @@ public class HomeActivity extends AppCompatActivity implements LocationSource,
             }
         } else {
             Log.e("BRG","系统检测到未开启GPS定位服务");
-            Toast.makeText(HomeActivity.this, "系统检测到未开启GPS定位服务", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MapActivity.this, "系统检测到未开启GPS定位服务", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent();
             intent.setAction(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
             startActivityForResult(intent, 1315);
@@ -233,7 +233,7 @@ public class HomeActivity extends AppCompatActivity implements LocationSource,
 
                 } else {
                     // 权限被用户拒绝了。
-                    Toast.makeText(HomeActivity.this, "定位权限被禁止，相关地图功能无法使用！",Toast.LENGTH_LONG).show();
+                    Toast.makeText(MapActivity.this, "定位权限被禁止，相关地图功能无法使用！",Toast.LENGTH_LONG).show();
                 }
 
             }
