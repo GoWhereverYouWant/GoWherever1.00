@@ -11,4 +11,15 @@
     <string name="gps_follow">追踪</string>
     <string name="gps_rotate">转动</string>
 
+
+    <!--    个人信息！！！-->
+    <string name="gmail_com">******@.gmail.com</string>
+    <string name="usernumber">123456789</string>
+    <string name="username">username</string>
+    <string name="open">打开</string>
+    <string name="close">关闭</string>
+    <string name="title_home">主页</string>
+    <string name="title_map">地图</string>
+    <string name="title_self">个人中心</string>
+
 </resources>

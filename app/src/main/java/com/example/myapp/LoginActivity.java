@@ -7,7 +7,7 @@ import android.view.View;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class login extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,7 +19,7 @@ public class login extends AppCompatActivity {
     /**点击登录跳到主页*********************************************************/
     public void jump_to_home(View view){
         Intent intent = new Intent();
-        intent.setClass(this, MapActivity.class);
+        intent.setClass(this, HomeActivity.class);
         startActivity(intent);
     }
     /**点击登录跳到主页*********************************************************/

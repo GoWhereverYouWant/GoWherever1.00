@@ -30,11 +30,18 @@ dependencies {
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'com.google.maps.android:android-maps-utils:0.5'
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'jp.wasabeef:glide-transformations:2.0.1'
     //noinspection GradleCompatible
-    implementation 'com.android.support:percent:22.2.0'
+    implementation 'com.android.support:percent:29.0.2'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+    implementation 'androidx.navigation:navigation-fragment:2.0.0'
+    implementation 'androidx.navigation:navigation-ui:2.0.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
     implementation files('libs/AMap3DMap_6.9.4_AMapNavi_6.9.1_AMapSearch_6.9.2_AMapLocation_4.7.0_20190831.jar')
+    implementation 'com.githang:status-bar-compat:0.7'
+
 }

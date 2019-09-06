@@ -1,6 +1,7 @@
 package com.example.myapp;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.LocationManager;
@@ -9,7 +10,10 @@ import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
+import android.widget.FrameLayout;
+import android.widget.ListView;
 import android.widget.RadioGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,6 +22,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.amap.api.location.AMapLocation;
 import com.amap.api.location.AMapLocationClient;
@@ -27,22 +32,35 @@ import com.amap.api.maps.AMap;
 import com.amap.api.maps.LocationSource;
 import com.amap.api.maps.MapView;
 
+
 public class MapActivity extends AppCompatActivity implements LocationSource,
         AMapLocationListener, RadioGroup.OnCheckedChangeListener {
-
+    /**
+     * 地图对象和定位对象定义
+     */
     private AMap aMap;
     private MapView mapView;
     // 处理定位更新
     private LocationSource.OnLocationChangedListener mListener;
     // 定位
     private AMapLocationClient mlocationClient;
-
     private AMapLocationClientOption mLocationOption;
     private RadioGroup mGPSModeGroup;
-
     private TextView mLocationErrText;
-
-
+    /**
+     * 滑动窗口
+     */
+    private static final String TAG = "MainActivity";
+    private Context mContext;
+    private DrawerLayout mDlMain;
+    private FrameLayout mFlContent;
+    private RelativeLayout mRlLeft, mRlRight;
+    private ListView mLvLeft;
+    private ListView mTvRight;
+    private String[] leftMenuNames = {"left_item1", "left_item2",
+            "left_item3", "left_item4"};
+    private String[] rightMenuNames = {"right_item1", "right_item2",
+            "right_item3", "right_item4"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +69,8 @@ public class MapActivity extends AppCompatActivity implements LocationSource,
         requestWindowFeature(Window.FEATURE_NO_TITLE);// 不显示程序的标题栏
         setContentView(R.layout.activity_map);
         Toolbar toolbar = findViewById(R.id.toolbar);
+//        mContext = this;
+
         setSupportActionBar(toolbar);
 
         //获取地图控件引用
@@ -58,6 +78,7 @@ public class MapActivity extends AppCompatActivity implements LocationSource,
         //在activity执行onCreate时执行mMapView.onCreate(savedInstanceState)，创建地图
         mapView.onCreate(savedInstanceState);
         init();
+//        initView();
 
 //        MyLocationStyle myLocationStyle;
 //        myLocationStyle = new MyLocationStyle();//初始化定位蓝点样式类myLocationStyle.myLocationType(MyLocationStyle.LOCATION_TYPE_LOCATION_ROTATE);//连续定位、且将视角移动到地图中心点，定位点依照设备方向旋转，并且会跟随设备移动。（1秒1次定位）如果不设置myLocationType，默认也会执行此种模式。
@@ -88,7 +109,21 @@ public class MapActivity extends AppCompatActivity implements LocationSource,
 //        });
     }
 
-
+//    /**
+//     * 视图初始化
+//     */
+//    private void initView() {
+//        mDlMain = (DrawerLayout) findViewById(R.id.dl_main);
+//        mFlContent = (FrameLayout) findViewById(R.id.fl_content);
+//        mRlLeft = (RelativeLayout) findViewById(R.id.rl_left);
+//        mRlRight = (RelativeLayout) findViewById(R.id.rl_right);
+//        mLvLeft = (ListView) findViewById(R.id.lv_left);
+//        mLvLeft.setAdapter(new ArrayAdapter<String>(mContext,
+//                android.R.layout.simple_list_item_1, leftMenuNames));//给左边菜单写入数据
+//        mTvRight = (ListView) findViewById(R.id.rv_right);
+//        mTvRight.setAdapter(new ArrayAdapter<String>(mContext,
+//                android.R.layout.simple_list_item_1, rightMenuNames));//给右边菜单内容写入数据
+//    }
     private void init() {
         if (aMap == null) {
             aMap = mapView.getMap();
@@ -252,6 +287,7 @@ public class MapActivity extends AppCompatActivity implements LocationSource,
         }
         mlocationClient = null;
     }
+
 
 
 }
