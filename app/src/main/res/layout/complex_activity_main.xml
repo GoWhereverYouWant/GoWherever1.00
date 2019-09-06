@@ -48,8 +48,8 @@
 
 	<RelativeLayout
 		android:id="@+id/login_layout"
-		android:layout_width="361dp"
-		android:layout_height="513dp"
+		android:layout_width="wrap_content"
+		android:layout_height="618dp"
 		android:layout_below="@+id/title_layout"
 		android:layout_alignParentStart="true"
 		android:layout_alignParentEnd="true"
@@ -77,8 +77,26 @@
 			android:textAlignment="center"
 			android:textColor="@android:color/white"
 			android:textSize="22sp" />
+		<!--登录界面图像-->
 
 		<!--用户名行布局-->
+		<Button
+			android:id="@+id/login_map"
+			android:layout_width="402dp"
+			android:layout_height="48dp"
+			android:layout_below="@+id/passwd_layout"
+			android:layout_marginLeft="10dp"
+			android:layout_marginTop="143dp"
+			android:layout_marginRight="10dp"
+
+			android:background="@drawable/button_selector"
+			android:gravity="center"
+			android:onClick="jump_to_map"
+			android:text="转到地图"
+			android:textAlignment="center"
+			android:textColor="@android:color/white"
+			android:textSize="22sp" />
+
 		<FrameLayout
 			android:id="@+id/passwd_layout"
 			android:layout_width="fill_parent"

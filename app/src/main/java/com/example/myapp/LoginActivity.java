@@ -25,6 +25,15 @@ public class LoginActivity extends AppCompatActivity {
     /**点击登录跳到主页*********************************************************/
 
 
+    /**点击登录跳到地图*********************************************************/
+    public void jump_to_map(View view){
+        Intent intent = new Intent();
+        intent.setClass(this, MapActivity.class);
+        startActivity(intent);
+    }
+    /**点击登录跳到地图*********************************************************/
+
+
     /**点击右上角注册跳到注册页面*********************************************************/
     public void jump_to_signin(View view){
         Intent intent = new Intent();

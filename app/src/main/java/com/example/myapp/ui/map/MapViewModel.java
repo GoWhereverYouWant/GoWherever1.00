@@ -4,17 +4,23 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import com.amap.api.maps.AMap;
+import com.amap.api.maps.MapView;
+
 public class MapViewModel extends ViewModel {
 
-    private MutableLiveData<String> mText;
-
+    private MutableLiveData<MapView> mText;
+    private AMap amap;
     public MapViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is dashboard fragment");
     }
 
-    public LiveData<String> getText() {
+    public LiveData<MapView> getView() {
         return mText;
     }
+
+
+
+
 
 }
